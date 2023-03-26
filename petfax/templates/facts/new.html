@@ -9,12 +9,12 @@
 </head>
 <body>
     <div class="container">
-    <h1>Submit Fact</h1>
+    <h1>Submit Fax</h1>
     <div class ="callout">
         Add a fun animal fact!!
     </div>
     <div class="facts-container">
-    <form method="POST" action="{{ url_for('fact.new') }}">
+    <form action="/facts" method="POST">
         <label for="submitter">Name:</label>
         <input type="text" id="submitter" name="submitter"><br>
 
