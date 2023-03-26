@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petfax</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Petfax</h1>
+        <div class="callout">
+            Welcome to Petfax!
+        </div>
+        <div class="pets-container">
+            {% for pet in pets %}
+            <div class="pet">
+                <h2>{{ pet.pet_name }}</h2>
+                <img src="{{ pet.pet_photo }}" alt="Photo of pet" />
+                <a href="/pets/{{ pet.pet_id }}">Learn more </a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="callout">
+            <a href="{{ url_for('fact.new') }}"> If you have more fun facts, please submit here! Submit Fact</a>
+        </div>
+</body>
+
+</html>
