@@ -10,6 +10,10 @@
 <body>
     <div class="container">
         <H1>UserFax</H1>
+        {% for fact in facts %}
+        <h4>Submitted by {{ fact.submitter }}</h4>
+        {{ fact.fact }}
+        {% endfor %}
         <a href="/pets"> Go Back </a>
     </div>
     
